@@ -8,11 +8,6 @@
   "dependencies": {
     "cymap": "^1.0.3"
   },
-  "type": "module",
-  "compilerOptions": {
-    "types": [
-      "cypress",
-      "./cypress/support/index.d.ts"
-    ]
-  }
+  "type": "module"
+  
 }
