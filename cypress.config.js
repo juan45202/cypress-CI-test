@@ -1,6 +1,5 @@
 const { defineConfig } = require("cypress");
-const cymapTasks = require("cymap/src/cymapTasks")
-
+const cymapTasks = require("./node_modules/cymap/src/cymapTasks");
 module.exports =  defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
