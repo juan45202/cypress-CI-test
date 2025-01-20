@@ -1,4 +1,3 @@
-const cymapTasks = require("cymap/src/cymapTasks");
 
 describe('My First Test', () => {
     
@@ -6,15 +5,16 @@ describe('My First Test', () => {
         // cy.visit("/");
         // cy.get('a[data-id="2"]').click();
         // cy.get('.badge-success').contains('1');
-        
+        console.log("OEEEEE", Cypress.env('password'))
         cy.setConnectionConfig( {
-            password:"vdso vtxq miht ydwq",
-            user:"juanchomon45@gmail.com",
-            host:'imap.gmail.com',
-            port:993,
+            password: Cypress.env('password'),
+            user: Cypress.env('user'),
+            host: Cypress.env('host'),
+            port: Cypress.env('port'),
             tls:true,
             tlsOptions: { rejectUnauthorized: false }
         });
         cy.getEmailByIndex(1);
+        
     })
   })
