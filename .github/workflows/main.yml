@@ -17,9 +17,6 @@ jobs:
       
       - name: Install all dependencies
         run: npm install
-      
-      - name: other dependencie
-        run: npm install cypress --save-dev
 
       - name: run test case mail
         run: npx cypress run --spec "cypress/e2e/firstTest.cy.js"
