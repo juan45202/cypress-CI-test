@@ -6,6 +6,9 @@
     "cymap": "^1.0.3",
     "cypress": "^13.14.1"
   },
+  "dependencies": {
+    "cymap": "^1.0.3"
+  },
   "compilerOptions": {
     "types": [
       "cypress",
