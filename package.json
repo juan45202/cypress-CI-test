@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "devDependencies": {
+    "cymap": "^1.0.3",
+    "cypress": "^13.14.1"
+  },
+  "compilerOptions": {
+    "types": [
+      "cypress",
+      "./cypress/support/index.d.ts"
+    ]
+  }
+}
