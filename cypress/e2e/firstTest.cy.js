@@ -3,7 +3,7 @@ describe('My First Test', () => {
 
     it('Visits the Kitchen Sink', () => {
         cy.setConnectionConfig( {
-            password: Cypress.env('vdso vtxq miht ydwq'),
+            password: Cypress.env('password'),
             user: Cypress.env('user'),
             host: Cypress.env('host'),
             port: Cypress.env('port'),

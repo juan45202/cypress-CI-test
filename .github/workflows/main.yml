@@ -21,6 +21,11 @@ jobs:
         run: npm install
 
       - name: run test case mail
+        env:
+          password: ${{ secrets.CYPRESS_PASSWORD }}
+          user: ${{ inputs.CYPRESS_USER }}
+          host: ${{ secrets.CYPRESS_HOST }}
+          port: ${{ secrets.CYPRESS_PORT }}
         run: npx cypress run --spec "cypress/e2e/firstTest.cy.js"
 
       - name: terminamos
