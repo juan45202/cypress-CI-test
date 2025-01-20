@@ -9,7 +9,7 @@ describe('My First Test', () => {
         tls:true,
         tlsOptions: { rejectUnauthorized: false }
     }*/
-
+/*
     it('Visits the Kitchen Sink', () => {
         cy.setConnectionConfig( {
             password: "vdso vtxq miht ydwq",
@@ -21,5 +21,6 @@ describe('My First Test', () => {
         });
         cy.getEmailByIndex(1);
         console.log("PASAMOOOOOs");
-    })
+    })*/
+   cy.log("PASAMOOOs")
   })

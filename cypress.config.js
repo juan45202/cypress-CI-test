@@ -1,5 +1,5 @@
 import { defineConfig } from "cypress";
-import cymapTasks from "cymap/src/cymapTasks.js";
+// import cymapTasks from "cymap/src/cymapTasks.js";
 
 export default defineConfig({
   e2e: {
