@@ -1,0 +1,19 @@
+name: Run tests with secrets
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Cypress-Test:
+    runs-on: ubunto-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cypress Run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm start
