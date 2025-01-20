@@ -11,6 +11,6 @@ describe('My First Test', () => {
             tlsOptions: { rejectUnauthorized: false }
         });
         cy.getEmailByIndex(1);
-        
+        console.log("PASAMOOOOOs");
     })
   })
