@@ -21,9 +21,8 @@ jobs:
         run: npm install
 
       - name: run test case mail
-        uses: cypress-io/github-action@v5
-        with:
-          config:
+        uses: cypress-io/github-action@v6
+        env:
           CYPRESS_password: ${{ secrets.CYPRESS_PASSWORD }}
           CYPRESS_user: ${{ secrets.CYPRESS_USER }}
           CYPRESS_host: ${{ secrets.CYPRESS_HOST }}
