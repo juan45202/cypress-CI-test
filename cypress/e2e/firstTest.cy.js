@@ -2,7 +2,7 @@
 describe('My First Test', () => {
 
     it('Visits the Kitchen Sink', () => {
-        console.log("OEEEEEEEE",Cypress.env('password'));
+        cy.log("OEEEEEEEE",Cypress.env('password'));
         console.log(Cypress.env('port'));
         cy.setConnectionConfig( {
             password: Cypress.env('password'),
