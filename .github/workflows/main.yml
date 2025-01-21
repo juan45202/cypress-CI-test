@@ -23,10 +23,10 @@ jobs:
       
       - name: hola
         run: |
-          echo "CYPRESS_password=${{secrets.CYPRESS_PASSWORD}}" >> $GITHUB_ENV
-          echo "CYPRESS_user=${{secrets.CYPRESS_USER}}" >> $GITHUB_ENV
-          echo "CYPRESS_host=${{secrets.CYPRESS_HOST}}" >> $GITHUB_ENV
-          echo "CYPRESS_port=${{secrets.CYPRESS_PORT}}" >> $GITHUB_ENV
+          echo "password=${{secrets.CYPRESS_PASSWORD}}" >> $GITHUB_ENV
+          echo "user=${{secrets.CYPRESS_USER}}" >> $GITHUB_ENV
+          echo "host=${{secrets.CYPRESS_HOST}}" >> $GITHUB_ENV
+          echo "port=${{secrets.CYPRESS_PORT}}" >> $GITHUB_ENV
       - name: run run  
         run: npx cypress run --spec "cypress/e2e/firstTest.cy.js"   
         
