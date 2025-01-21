@@ -20,23 +20,13 @@ jobs:
       - name: Install all dependencies
         run: npm install
 
-      
-      - name: hola
-        run: |
-          echo "PASSWORD=${{secrets.CYPRESS_PASSWORD}}" >> $GITHUB_ENV
-          echo "USER=${{secrets.CYPRESS_USER}}" >> $GITHUB_ENV
-          echo "HOST=${{secrets.CYPRESS_HOST}}" >> $GITHUB_ENV
-          echo "PORT=${{secrets.CYPRESS_PORT}}" >> $GITHUB_ENV
 
       - name: run run
+        uses: cypress-io/github-action@v6
+        with:
+          env:
+            PASSWORD=${{secrets.CYPRESS_PASSWORD}},USER=${{secrets.CYPRESS_USER}},HOST=${{secrets.CYPRESS_HOST}},PORT=${{secrets.CYPRESS_PORT}}
         
-        run: npx cypress run --spec "cypress/e2e/firstTest.cy.js"   
-        env:
-          PASSWORD: ${{secrets.CYPRESS_PASSWORD}}
-          USER: ${{secrets.CYPRESS_USER}}
-          HOST: ${{secrets.CYPRESS_HOST}}
-          PORT: ${{secrets.CYPRESS_PORT}}
-
       - name: terminamos
         run: echo "Listo"
       
