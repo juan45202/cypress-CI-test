@@ -19,16 +19,14 @@ jobs:
       
       - name: Install all dependencies
         run: npm install
-
-      - name: run test case mail
-        uses: cypress-io/github-action@v6
+        
+      
+      - name: run run 
         env:
           password: ${{ secrets.CYPRESS_PASSWORD }}
           user: ${{ secrets.CYPRESS_USER }}
           host: ${{ secrets.CYPRESS_HOST }}
-          port: ${{ secrets.CYPRESS_PORT }}
-      
-      - name: run run    
+          port: ${{ secrets.CYPRESS_PORT }}   
         run: npx cypress run --spec "cypress/e2e/firstTest.cy.js"   
         
 
