@@ -22,7 +22,7 @@ jobs:
 
 
       - name: run run
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v5
         with:
           spec: cypress/e2e/firstTest.cy.js
           env:
