@@ -26,10 +26,7 @@ jobs:
         with:
           spec: cypress/e2e/firstTest.cy.js
           env:
-            PASSWORD=${{secrets.CYPRESS_PASSWORD}},
-            USER=${{secrets.CYPRESS_USER}},
-            HOST=${{secrets.CYPRESS_HOST}},
-            PORT=${{secrets.CYPRESS_PORT}}
+            PASSWORD=${{secrets.CYPRESS_PASSWORD}},USER=${{secrets.CYPRESS_USER}},HOST=${{secrets.CYPRESS_HOST}},PORT=${{secrets.CYPRESS_PORT}}
         
         
       - name: terminamos
