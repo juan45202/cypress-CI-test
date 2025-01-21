@@ -23,10 +23,10 @@ jobs:
       - name: run test case mail
         uses: cypress-io/github-action@v6
         env:
-          CYPRESS_password: ${{ secrets.CYPRESS_PASSWORD }}
-          CYPRESS_user: ${{ secrets.CYPRESS_USER }}
-          CYPRESS_host: ${{ secrets.CYPRESS_HOST }}
-          CYPRESS_port: ${{ secrets.CYPRESS_PORT }}
+          password: ${{ secrets.CYPRESS_PASSWORD }}
+          user: ${{ secrets.CYPRESS_USER }}
+          host: ${{ secrets.CYPRESS_HOST }}
+          port: ${{ secrets.CYPRESS_PORT }}
       
       - name: run run    
         run: npx cypress run --spec "cypress/e2e/firstTest.cy.js"   
