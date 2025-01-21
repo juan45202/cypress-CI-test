@@ -29,13 +29,13 @@ jobs:
           echo "CYPRESS_PORT=${{secrets.CYPRESS_PORT}}" >> $GITHUB_ENV
 
       - name: run run
+        
+        run: npx cypress run --spec "cypress/e2e/firstTest.cy.js"   
         env:
           CYPRESS_PASSWORD: ${{secrets.CYPRESS_PASSWORD}}
           CYPRESS_USER: ${{secrets.CYPRESS_USER}}
           CYPRESS_HOST: ${{secrets.CYPRESS_HOST}}
           CYPRESS_PORT: ${{secrets.CYPRESS_PORT}}
-        run: npx cypress run --spec "cypress/e2e/firstTest.cy.js"   
-        
 
       - name: terminamos
         run: echo "Listo"
