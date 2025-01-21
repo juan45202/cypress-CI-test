@@ -8,7 +8,7 @@ describe('My First Test', () => {
             password: Cypress.env('password'),
             user: Cypress.env('user'),
             host: Cypress.env('host'),
-            port: +Cypress.env('port'),
+            port: Cypress.env('port'),
             tls:true,
             tlsOptions: { rejectUnauthorized: false }
         });
