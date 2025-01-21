@@ -5,10 +5,10 @@ describe('My First Test', () => {
         cy.log("OEEEEEEEE",Cypress.env('password'));
         console.log(Cypress.env('port'));
         cy.setConnectionConfig( {
-            password: Cypress.env('password'),
-            user: Cypress.env('user'),
-            host: Cypress.env('host'),
-            port: Cypress.env('port'),
+            password: Cypress.env('PASSWORD'),
+            user: Cypress.env('USER'),
+            host: Cypress.env('HOST'),
+            port: +Cypress.env('PORT'),
             tls:true,
             tlsOptions: { rejectUnauthorized: false }
         });
