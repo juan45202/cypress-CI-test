@@ -32,7 +32,7 @@ jobs:
         run: npm install
 
       - name: run run
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v6
         with:
           spec: cypress/e2e/firstTest.cy.js
           env:
