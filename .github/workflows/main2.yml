@@ -28,7 +28,7 @@ jobs:
  #       with:
  #         node-version: '22.11.0'
       
-      - name: Install all dependencies 2222
+      - name: Install all dependencies - vamos a veeee
         run: npm install
 
       - name: run run
