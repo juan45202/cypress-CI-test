@@ -18,7 +18,7 @@ jobs:
           path: |
             node_modules
             ~/.cache/Cypress
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/cypress.config.json') }}
           restore-keys: |
             ${{ runner.os }}-node-modules-
         
