@@ -3,10 +3,15 @@
     "cy:open": "cypress open"
   },
   "devDependencies": {
-    "cymap": "^1.0.3",
     "cypress": "^13.14.1"
   },
+  "dependencies": {
+    "cymap": "^1.0.3"
+  },
+  "type": "module",
   "compilerOptions": {
+    "moduleResolution": "node",
+    "allowJs": true,
     "types": [
       "cypress",
       "./cypress/support/index.d.ts"

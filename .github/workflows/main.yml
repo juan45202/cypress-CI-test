@@ -1,0 +1,33 @@
+name: Run tests with secrets
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Cypress-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.11.0'
+      
+      - name: Install all dependencies
+        run: npm install
+
+      - name: run run
+        uses: cypress-io/github-action@v5
+        with:
+          spec: cypress/e2e/firstTest.cy.js
+          env:
+            PASSWORD=${{secrets.CYPRESS_PASSWORD}},USER=${{secrets.CYPRESS_USER}},HOST=${{secrets.CYPRESS_HOST}},PORT=${{secrets.CYPRESS_PORT}}
+        
+        
+      - name: terminamos
+        run: echo "Listo"
+      

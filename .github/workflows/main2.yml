@@ -1,0 +1,45 @@
+name: Run tests with secrets
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Cypress-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4  
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+            ~/.cache/Cypress
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/cypress.config.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+        
+
+#      - name: setup node.js
+ #       uses: actions/setup-node@v3
+ #       with:
+ #         node-version: '22.11.0'
+      
+#      - name: Install all dependencies - vamos a veeee
+#        run: npm install
+
+      - name: run run 2 
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          spec: cypress/e2e/firstTest.cy.js
+          env:
+            PASSWORD=${{secrets.CYPRESS_PASSWORD}},USER=${{secrets.CYPRESS_USER}},HOST=${{secrets.CYPRESS_HOST}},PORT=${{secrets.CYPRESS_PORT}}
+        
+        
+      - name: terminamos
+        run: echo "Listo"
+      
