@@ -34,7 +34,7 @@ jobs:
       - name: run run 2 
         uses: cypress-io/github-action@v6
         with:
-          cache-key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/cypress.config.json') }}
+          cache-key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
           spec: cypress/e2e/firstTest.cy.js
           env:
             PASSWORD=${{secrets.CYPRESS_PASSWORD}},USER=${{secrets.CYPRESS_USER}},HOST=${{secrets.CYPRESS_HOST}},PORT=${{secrets.CYPRESS_PORT}}
